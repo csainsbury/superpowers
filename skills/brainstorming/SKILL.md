@@ -14,6 +14,13 @@ People often haven't finished working out what they want. Good questions
 help them think it through. When you understand the why, you make the
 hundred decisions they never mention the way they would have made them.
 
+## L0 Goal
+
+If the project declares an L0 goal (see using-superpowers), read it before
+classifying. Every design names the L0 requirement it serves and how its
+result would bear on the goal's decisive observable. Design approval never
+amends the L0 goal; a design that would change it is a stop, not a design.
+
 ## First: What Do You Actually Know?
 
 Before you reply, ask yourself: what do I know about what they want, and

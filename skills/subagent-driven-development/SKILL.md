@@ -24,10 +24,14 @@ judgment settles what neither answers. Record every decision in the ledger as
 going. A wrong ruling costs rework your human partner can see and undo; a
 session parked on a question costs their whole day and buys nothing.
 
-Four things stop you, and only these: an irreversible or destructive
+Five things stop you, and only these: an irreversible or destructive
 operation; a security-sensitive action; a side effect outside this worktree
 that norms say you ask about first (a merge, a push to a shared branch, a
-publish); and a plan so broken that every path forward is a guess. For those,
+publish); a plan so broken that every path forward is a guess; and anything
+that would change the project's L0 goal (see using-superpowers: a changed
+question, requirement, evaluator, baseline, partition, post-hoc margin,
+non-claim, or a surrogate presented as progress) or an L0 verify command
+that fails. You rule on how to reach the L0 goal, never on what it is. For those,
 stop and ask.
 
 ## When to Use
@@ -132,6 +136,11 @@ todo per task. If the plan names a Spec, read that too: the spec is the
 authority the plan argues from, and conflicts inside the plan resolve
 against it. A plan with no reachable spec gets a ledger note saying so —
 rulings made without one are provisional.
+
+If the plan or project instructions name an L0 goal, run its verify command
+and read the goal itself — not the plan's summary of it. Record
+`L0: <path> verified <hash>` in the ledger. No verify command, or a failed
+verification, gets a ledger note and a stop before Task 1.
 
 Before dispatching Task 1, read [references/preflight.md](references/preflight.md)
 and run the conflict scan it describes. Its table and rulings go in the

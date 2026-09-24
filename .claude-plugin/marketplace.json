@@ -1,6 +1,6 @@
 {
-  "name": "superpowers-dev",
-  "description": "Development marketplace for Superpowers core skills library",
+  "name": "superpowers-cog",
+  "description": "Cog fork of Superpowers with L0 goal anchoring",
   "owner": {
     "name": "Jesse Vincent",
     "email": "jesse@fsck.com"

@@ -25,6 +25,9 @@ Subagent (general-purpose):
     Global constraints from the spec/design that bind this task:
     [GLOBAL_CONSTRAINTS]
 
+    L0 goal (read this file yourself; it outranks the brief, plan and spec):
+    [L0_GOAL_FILE]
+
     ## What the Implementer Claims They Built
 
     Read the implementer's report: [REPORT_FILE]
@@ -90,6 +93,22 @@ Subagent (general-purpose):
     genuinely missing or garbled, report that as a gap for the controller.
     Re-running the suite to regenerate what you failed to read is not
     verification; illegibility of the evidence is not invalidation of it.
+
+    ## Part 0: L0 Goal
+
+    If an L0 goal file is given (not "none"), first run its verify command
+    if it states one, then read it directly — do not rely on the brief's or
+    the controller's account of it. Judge the diff and the implementer's
+    report against it:
+
+    - **Serves:** which L0 requirement this task bears on, or "infrastructure"
+      if it only enables later work.
+    - **Redefines:** does the change, or how the report describes its
+      result, alter the goal's question, requirements, evaluator, baseline,
+      data partition or margins, cross a declared non-claim, or present a
+      surrogate (teacher-forced, query-only, favourable subset, weaker
+      baseline) as progress on the goal? Any yes is Critical, labelled
+      L0, and the controller must stop rather than rule on it.
 
     ## Part 1: Spec Compliance
 
@@ -160,6 +179,11 @@ Subagent (general-purpose):
 
     ## Output Format
 
+    ### L0 Goal
+
+    - n/a (no L0 goal) | ✅ Serves: [requirement or "infrastructure"] |
+      ❌ L0 Critical: [what would change or be misrepresented, file:line]
+
     ### Spec Compliance
 
     - ✅ Spec compliant | ❌ Issues found: [what's missing/extra/misunderstood,
@@ -196,6 +220,8 @@ Subagent (general-purpose):
   the plan's Global Constraints section or the spec: exact values, formats,
   and stated relationships between components (not process rules — those
   are already in this template)
+- `[L0_GOAL_FILE]` — the project's L0 goal path and verify command, or
+  "none". Pass the path, never a summary.
 - `[REPORT_FILE]` — REQUIRED: the file the implementer wrote its detailed
   report to
 - `[BASE_SHA]` — commit before this task

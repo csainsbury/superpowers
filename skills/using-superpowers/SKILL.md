@@ -60,6 +60,25 @@ If your harness appears here, read its reference file for special instructions:
 - Hermes Agent: `references/hermes-tools.md`
 - Muse: `references/muse-tools.md`
 
+## L0 Goals
+
+Some projects declare an **L0 goal**: a locked, human-owned document that sits
+above every spec and plan. Project instructions (CLAUDE.md, AGENTS.md) or your
+human partner name it, usually with a verify command.
+
+- Specs and plans serve the L0 goal. They cite it; they never restate,
+  narrow, reinterpret or replace it.
+- Nothing in these skills changes it: not a ruling, not a design approval,
+  not a spec. Only your human partner changes it, as a new locked version.
+- An action that would change its question or requirements, its evaluator,
+  baseline, data partition or margins after scoring, or its declared
+  non-claims, or that would present a surrogate result as progress on it,
+  is a **stop**: report to your human partner instead of deciding.
+- If it has a verify command, run it before relying on the goal and before
+  each review. A failed verification is a stop.
+- A red result is evidence against the goal's claim. Record it as that; it
+  is never a reason to redefine what passing means.
+
 ## User Instructions
 
 User instructions (CLAUDE.md, AGENTS.md, GEMINI.md, etc, direct requests) take precedence over skills, which in turn override default behavior. Only skip skill workflows or instructions when your human partner has explicitly told you to.
