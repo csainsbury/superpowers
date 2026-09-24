@@ -70,6 +70,9 @@ argues from the spec, so the spec travels with it; executors read both]
 **L0 goal:** [path and verify command of the project's L0 goal, or "none".
 Cite it; never paraphrase it here.]
 
+**Owned route:** [the owned route this plan serves, quoted verbatim from the
+routes file with its source, or "none"]
+
 **Bears on:** [which L0 requirement this plan serves, and what result would
 make that requirement more or less tenable. Omit if L0 goal is "none".]
 

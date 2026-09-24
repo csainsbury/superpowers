@@ -78,6 +78,13 @@ human partner name it, usually with a verify command.
   each review. A failed verification is a stop.
 - A red result is evidence against the goal's claim. Record it as that; it
   is never a reason to redefine what passing means.
+- **Owned routes.** Routes your human partner specified are theirs. They
+  live verbatim, with their source, in a routes file beside the L0 goal
+  (e.g. `state/l0/<programme>-routes.md`), verified like the goal. You may
+  add routes beside them. You may never drop, narrow, replace, re-scope or
+  silently reorder one, and a plan that departs from an owned route is a
+  stop (`L0 STOP:`), not a ruling. Quote the owned route in any plan that
+  serves it.
 - Label every intervention at the **start of its own line**, in your message
   to your human partner, so it can be collected into a digest:
   `L0 STOP: <what would have changed the goal, and what you did instead>`,

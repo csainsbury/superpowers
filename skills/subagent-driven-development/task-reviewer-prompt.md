@@ -109,6 +109,9 @@ Subagent (general-purpose):
       surrogate (teacher-forced, query-only, favourable subset, weaker
       baseline) as progress on the goal? Any yes is Critical, labelled
       L0, and the controller must stop rather than rule on it.
+    - **Owned route:** if the L0 goal has a routes file, read it. Does the
+      task implement a narrower, different or substituted version of an
+      owned route it claims to serve? Any yes is Critical, labelled L0.
 
     ## Part 1: Spec Compliance
 
