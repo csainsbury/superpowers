@@ -78,6 +78,12 @@ human partner name it, usually with a verify command.
   each review. A failed verification is a stop.
 - A red result is evidence against the goal's claim. Record it as that; it
   is never a reason to redefine what passing means.
+- Label every intervention at the **start of its own line**, in your message
+  to your human partner, so it can be collected into a digest:
+  `L0 STOP: <what would have changed the goal, and what you did instead>`,
+  `L0 Critical: <reviewer finding>` (always pass reviewer L0 Criticals on),
+  and `Ruling: <decision> — <why> — <cost if wrong>` for each ruling you
+  report. Never use these labels for anything else.
 
 ## User Instructions
 
