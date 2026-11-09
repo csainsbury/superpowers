@@ -5,6 +5,8 @@ description: Use when executing an implementation plan in the current session as
 
 # Executing Plans
 
+Applicability: user/project bounded-direct-work rules take precedence. Do not invoke this workflow for a tiny declarative edit or add worktrees, artifacts, review calls or approval gates contrary to the active instruction. Follow the active plan's review budget and topology rather than adding review calls by default. An approved plan supplies continuing authority only within its scope and budget; unresolved scope/privacy/account/budget/process-control decisions still require the authorised human decision.
+
 Execute the plan yourself, task by task, in this session: no implementer
 subagent per task, no reviewer per task. One fresh-context review of the
 whole branch at the end.
@@ -29,14 +31,18 @@ between tasks. They chose inline execution to spend less, not to answer
 "should I continue?" after every task. Execute all tasks from the plan
 without stopping.
 
-**Rulings, not stalls.** Conflicts, ambiguities, plan defects — decide them.
+**Rulings, not stalls.** Conflicts, ambiguities, plan defects inside approved
+scope and budget — decide them. New scope, route, privacy, account, budget or
+process-control authority needs the authorised human decision, not a ruling.
 The spec is the binding authority, the plan is its argument, and your
 judgment settles what neither answers. Record every decision in the ledger
 as `Ruling: <what you decided> — <why> — <what it costs if wrong>`, and keep
 going. Deviating from the plan without a ledgered ruling is a decision made
 in secret.
 
-Five things stop you, and only these: an irreversible or destructive
+Within user/project authority (including scope, budget, confidentiality and
+exact process-control limits), these are additional stops.
+Five things stop you: an irreversible or destructive
 operation; a security-sensitive action; a side effect outside this worktree
 that norms say you ask about first (a merge, a push to a shared branch, a
 publish); a plan so broken that every path forward is a guess; and anything
@@ -56,10 +62,12 @@ those, stop and ask.
 - Tasks are mostly independent — the same precondition as
   superpowers:subagent-driven-development.
 
-A fully specified plan makes inline execution transcription plus testing:
-it runs well on a mid-tier session model, and the one place the most
-capable model earns its cost is the final review, which this skill
-dispatches separately. Tell your human partner so when they choose inline.
+Use the least expensive sufficiently capable authorised model, subscription-first,
+and an independent sufficient reviewer for the diff's risk. Escalation needs a
+demonstrated capability gap or the user's explicit choice within route/budget
+authority. Never silently switch provider, enter paid inference or increase cost;
+unknown charging routes fail closed. Before selecting a model, read
+[model-selection.md](../subagent-driven-development/references/model-selection.md).
 
 Prefer superpowers:subagent-driven-development when your human partner
 wants a review gate on every task, or when the plan is long enough that
@@ -248,17 +256,18 @@ Run `../subagent-driven-development/scripts/review-package PLAN_FILE MERGE_BASE 
 by its absolute path, from the working tree you're executing in (MERGE_BASE = the commit the branch started from, e.g.
 `git merge-base main HEAD`) and review from the file it prints.
 
-**With a subagent tool:** dispatch the reviewer on the most capable
-available model — the whole-branch review is a judgment task — using
+**With a subagent tool:** dispatch an independent sufficient reviewer selected
+for the actual diff's complexity and risk, on an authorised subscription-first
+route (not automatically a more expensive model), using
 superpowers:requesting-code-review's
 [code-reviewer.md](../requesting-code-review/code-reviewer.md), with the
 package path, the plan and spec paths, the plan's Review Focus section
 verbatim if it has one (the input classes and failure modes the plan's
 tests do not exercise — the reviewer checks each deliberately), and a
 pointer to the ledger's `Ruling:` lines so it can weigh the calls you
-made. Specify the model
-explicitly; an omitted model inherits the session's, which may not be the
-most capable. This is the one fresh context the whole run buys. Do not
+made. Specify the sufficient authorised model explicitly; an omitted model
+can inherit an unintended route/cost. This is the one fresh context the
+whole run buys. Do not
 skip it, and do not replace it with your own read of the diff.
 
 **Without a subagent tool:** read code-reviewer.md and perform that review

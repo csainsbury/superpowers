@@ -62,7 +62,7 @@ ${BOOTSTRAP_MARKER}
 
 You have superpowers.
 
-The using-superpowers skill content is included below and is already loaded for this Pi session. Follow it now. Do not try to load using-superpowers again.
+The using-superpowers applicability guidance is already loaded below; do not load it again. Apply user/project direct-work overrides at the trigger, including after compaction. A bounded declarative edit stays direct: no compulsory workflow stacking, delegation, task files or new approval gate. Load only a genuinely applicable named procedure; retain debugging, tested logic implementation and risk-appropriate review.
 
 ${body}
 
@@ -87,7 +87,7 @@ Pi has native skills but does not expose Claude Code's \`Skill\` tool. When a Su
 
 Pi's built-in coding tools are lowercase: \`read\`, \`write\`, \`edit\`, \`bash\`, plus optional \`grep\`, \`find\`, and \`ls\`. Use those for the corresponding actions: read a file, create or edit files, run shell commands, search file contents, find files by name, and list directories.
 
-Pi does not ship a standard subagent tool. If a subagent tool such as \`subagent\` from \`pi-subagents\` is available, use it for Superpowers subagent workflows. If no subagent tool is available, do the work in this session or explain the missing capability instead of inventing \`Task\` calls.
+Pi does not ship a standard subagent tool. If a tool such as \`subagent\` from \`pi-subagents\` is available, use it only when the authorised workflow needs independent bounded delegation; tool availability is not a trigger. Otherwise work directly or explain a genuinely missing required capability, never invent \`Task\` calls.
 
 Pi does not ship a standard task-list tool. If an installed todo/task tool is available, use it. Otherwise track work in plan files or a repo-local \`TODO.md\` when task tracking is needed. Treat older \`TodoWrite\` references as this task-tracking action.`;
 }

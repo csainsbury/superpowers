@@ -1,9 +1,20 @@
 ---
 name: brainstorming
-description: "You MUST use this before any creative work - creating features, building components, adding functionality, modifying behavior, or planning anything new, in software or out of it (a talk, a business, a renovation)."
+description: Use when genuinely unresolved product or design choices need discussion, or brainstorming is explicitly requested; not for bounded direct work or an already approved design
 ---
 
 # Brainstorming
+
+## Applicability and Authority
+
+User/project direct-work rules apply before this trigger. A bounded declarative edit
+stays direct: inspect the owner, edit narrowly, check and finish. Do not re-brainstorm
+an already approved design. An approved plan supplies continuing authority for its
+scoped implementation, ordinary tests and repairs; no new approval gate or workflow
+stack is added here. The design gates below apply only to genuinely unresolved product/design
+choices, not already authorised work. Ask when a new scope, privacy, security, account,
+budget or exact process-control decision falls outside existing authority.
+
 
 You are very good at building. You build what you believe your human
 partner wants, and that belief is usually thinner than it feels. This
@@ -30,7 +41,8 @@ why?
   blue"). This is a quick, clear task. Do it, and say what you did.
 - **Something non-trivial is missing.** Start the conversation.
 
-Before you start implementing, you must, in order:
+For a genuinely unresolved design without existing implementation authority,
+before you start implementing, you must, in order:
 
 1. Lay out the approaches in a message of their own, and have your
    human partner pick one (see Lay out the approaches).
@@ -254,7 +266,8 @@ builder check.
 Otherwise, pick a sensible place and say where. Your human partner's
 preferences override both.
 
-**Builder check** (for a project): dispatch a fresh subagent with
+**Builder check** (for a project, when independent bounded review is authorised
+and useful under the active review budget): dispatch a fresh subagent with
 `builder-check-prompt.md` in this directory. When you tell your human
 partner you're writing it up, say a reviewer will read it first and you
 may come back once with a few questions. Don't hand over the document
@@ -274,7 +287,8 @@ round of questions the check produces. Without a subagent tool, read the
 document as that builder yourself.
 
 <HARD-GATE>
-Nothing gets built until your human partner approves the design doc:
+For the unresolved design this workflow is resolving, nothing gets built until
+your human partner approves the design doc:
 the short one for a small change, the full one for a project.
 Building includes writing product code, scaffolding, installing
 dependencies, creating projects, and invoking an implementation skill.
@@ -285,8 +299,8 @@ and the gate goes with it. A spike they said yes to may be built; it
 stays labeled throwaway, and keeping what it produced is a new request
 that comes back through this gate.
 
-After the design doc is approved, the next step is the plan: invoke
-superpowers:writing-plans and no other skill.
+After design approval, use superpowers:writing-plans when a multi-step plan is
+needed. Otherwise implement within the existing authority and proportional workflow.
 </HARD-GATE>
 
 ## Red Flags

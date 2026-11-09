@@ -1,53 +1,26 @@
 ---
 name: using-superpowers
-description: Use when starting any conversation - establishes how to find and use skills, requiring skill invocation before ANY response including clarifying questions
+description: Use when checking whether a named Superpowers procedure applies; user/project direct-work overrides take precedence, including after compaction
 ---
 
 <SUBAGENT-STOP>
 If you were dispatched as a subagent to execute a specific task, ignore this skill.
 </SUBAGENT-STOP>
 
-<EXTREMELY-IMPORTANT>
-If you think there is even a 1% chance a skill might apply to what you are doing, you ABSOLUTELY MUST invoke the skill.
+## Applicability before procedure
 
-IF A SKILL APPLIES TO YOUR TASK, YOU DO NOT HAVE A CHOICE. YOU MUST USE IT.
+User/project direct-work overrides take precedence at the trigger, including after compaction. A bounded declarative edit to an existing label, URL, list or configuration value remains direct work: inspect the owner, edit narrowly, run the smallest applicable check and finish. Do not stack brainstorming, planning, TDD, worktree, reviewer or task/outcome scaffolding merely because an edit exists.
 
-This is not negotiable. You cannot rationalize your way out of this.
-</EXTREMELY-IMPORTANT>
+Load a named skill when its actual trigger is met or it was explicitly requested. A vague possible match is not enough. Bounded inspection or a clarifying question may establish the trigger without first loading a workflow. An approved plan already authorises its scoped implementation, ordinary tests and repairs; skills do not add another approval gate.
 
-## The Rule
+## Skill selection
 
-**Invoke relevant or requested skills BEFORE any response or action** — including clarifying questions, exploring the codebase, or checking files. If it turns out wrong for the situation, you don't have to use it.
+- Ambiguous product/design requirements or a new architecture decision → `superpowers:brainstorming`, within user/project authority. Do not re-brainstorm an already approved design.
+- A genuine bug, unexplained failure or failing test needing diagnosis → `superpowers:systematic-debugging`; retain evidence-led root-cause checks.
+- Authorised logic implementation → the applicable tested implementation procedure; use risk-appropriate independent review for substantial changes, not automatic maximum-cost review or a swarm.
+- Explicit tiny declarative edit with no new logic/risk → direct work, even after compaction. If inspection exposes logic, security, privacy or unresolved scope, apply the relevant procedure and authority boundary.
 
-**Before entering plan mode:** if you haven't already brainstormed, invoke the brainstorming skill first.
-
-Then announce "Using [skill] to [purpose]" and follow the skill exactly. If it has a checklist, create a todo per item.
-
-## Skill Priority
-
-When multiple skills apply, process skills come first — they set the approach, then implementation skills (frontend-design, etc.) carry it out. Brainstorming and systematic-debugging are Superpowers' most common process skills, but the rule holds for any of them.
-
-- "Let's build X" → superpowers:brainstorming first, then implementation skills.
-- "Fix this bug" → superpowers:systematic-debugging first, then domain skills.
-
-## Red Flags
-
-These thoughts mean STOP—you're rationalizing:
-
-| Thought | Reality |
-|---------|---------|
-| "This is just a simple question" | Questions are tasks. Check for skills. |
-| "I need more context first" | Skill check comes BEFORE clarifying questions. |
-| "Let me explore the codebase first" | Skills tell you HOW to explore. Check first. |
-| "I can check git/files quickly" | Files lack conversation context. Check for skills. |
-| "Let me gather information first" | Skills tell you HOW to gather information. |
-| "This doesn't need a formal skill" | If a skill exists, use it. |
-| "I remember this skill" | Skills evolve. Read current version. |
-| "This doesn't count as a task" | Action = task. Check for skills. |
-| "The skill is overkill" | Simple things become complex. Use it. |
-| "I'll just do this one thing first" | Check BEFORE doing anything. |
-| "This feels productive" | Undisciplined action wastes time. Skills prevent this. |
-| "I know what that means" | Knowing the concept ≠ using the skill. Invoke it. |
+Use only the smallest sufficient workflow/context. Do not create a new task, plan, outcome file, delegation wave or approval gate unless requested or required by the actual risk and project instructions. Check the current skill when it applies; remembering its name is not reading its procedure.
 
 ## Platform Adaptation
 
@@ -92,6 +65,17 @@ human partner name it, usually with a verify command.
   and `Ruling: <decision> — <why> — <cost if wrong>` for each ruling you
   report. Never use these labels for anything else.
 
+## Clinical Evidence Precedence
+
+For Cog programmes using clinical or EHR data, `state/l0/clinical-evidence-policy.md`
+outranks stricter blueprint or plan continuation/data-reuse rules. Grade evidence
+with estimate and interval, not pass/fail; a missed gate changes the claim, never
+by itself ends a line. Only Chris closes a route, line or programme. Held-out data
+may be reused with every decision-informing look logged. Disclosed post-hoc
+precision/measurement fixes are allowed; moving a claim margin after scoring is not.
+Keep claim gates separate from continuation guides; an unlabelled gate is a guide.
+This does not permit changing L0 questions, owned routes or human-owned margins.
+
 ## User Instructions
 
-User instructions (CLAUDE.md, AGENTS.md, GEMINI.md, etc, direct requests) take precedence over skills, which in turn override default behavior. Only skip skill workflows or instructions when your human partner has explicitly told you to.
+User instructions (CLAUDE.md, AGENTS.md, GEMINI.md, etc, direct requests) take precedence over skills, including standing bounded-direct-work rules; no per-task override phrase is required. Skill metadata grants neither broader scope nor new approval gates. Preserve privacy, clinical evidence, exact process-control authority and continuing execution boundaries.

@@ -94,6 +94,15 @@ Subagent (general-purpose):
     Re-running the suite to regenerate what you failed to read is not
     verification; illegibility of the evidence is not invalidation of it.
 
+    ## Clinical Evidence Precedence
+
+    For a Cog clinical/EHR programme, read its `state/l0/clinical-evidence-policy.md`
+    via the supplied project path. It outranks stricter blueprint or plan continuation
+    and data-reuse rules. Grade with estimate and interval; a missed gate changes the
+    claim, never by itself closes a line. Only Chris closes a route or programme.
+    Logged held-out reuse and disclosed measurement fixes are allowed, not moving
+    claim margins after scoring. Apply this precedence in the L0 verdict below.
+
     ## Part 0: L0 Goal
 
     If an L0 goal file is given (not "none"), first run its verify command
